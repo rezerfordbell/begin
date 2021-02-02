@@ -13,6 +13,8 @@ jobs:
      
    steps: 
        - uses: actions/checkout@v2
+       - name: Python install
+         uses: actions/setup-python@v2
        - name: setup package 
          run: pip install flake8
       
