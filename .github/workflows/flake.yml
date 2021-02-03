@@ -16,7 +16,7 @@ jobs:
        - name: Python install
          uses: actions/setup-python@v2
        - name: setup package 
-          uses: py-actions/flake8@v1
+        uses: py-actions/flake8@v1
       
        - name: run tests
          run: flake8 --statistics main.py
