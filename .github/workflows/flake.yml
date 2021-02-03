@@ -44,7 +44,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: create container  
-       run: docker build . --file Dockerfile
+      run: docker build . --file Dockerfile
     - uses: akhileshns/heroku-deploy@v3.9.9
       with:
         heroku_api_key: ${{secrets.HEROKU_KEY}}
