@@ -19,6 +19,6 @@ jobs:
          run: pip install flake8
       
        - name: run tests
-         run: flake8 --exclude=venv* --statistics
+         run: flake8 --statistics  main.py
        - name: result
          run: echo linting is done
