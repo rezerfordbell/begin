@@ -34,7 +34,7 @@ jobs:
              python -m pip install --upgrade pip
              pip install pytest
         - name: change folder
-          run: cd /scr
+          uses: actions/Buzum/begin/tree/master/scr
         -name: run test
           run: pytest test.py
           
