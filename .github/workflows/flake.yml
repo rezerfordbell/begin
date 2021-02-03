@@ -44,7 +44,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Push packages  
-      uses: docker/build-push-action@v1
+      #uses: docker/build-push-action@v1
+    - uses: akhileshns/heroku-deploy@v3.9.9
       with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
