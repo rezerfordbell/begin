@@ -9,29 +9,6 @@ action "login" {
   secrets = ["HEROKU_KEY"]
 }
 
-<<<<<<< HEAD
-jobs:
-  export-docker:
-    runs-on: ubuntu-latest
-    steps:
-      -
-        name: Checkout
-        uses: actions/checkout@v2
-      -
-        name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-      -
-        name: Build
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: ./Dockerfile
-          load: true
-          tags: myimage:latest
-      -
-        name: Inspect
-        run: echo "huila"
-=======
 action "push" {
   uses = "actions/heroku@master"
   needs = "login"
@@ -43,5 +20,4 @@ action "release" {
   uses = "actions/heroku@master"
   needs = "push"
   args = "container:release -a calm-fortress-1234 web"
-  secrets = ["HEROKU_KEY"]
->>>>>>> 7fead190c13870f3fa86440e3266f7548a261286
+  # secrets = ["HEROKU_KEY"]
