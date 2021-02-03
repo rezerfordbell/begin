@@ -49,4 +49,5 @@ jobs:
       with:
           heroku_api_key: ${{secrets.HEROKU_KEY}}
           heroku_app_name: "simpleapi9215"  
+          heroku_email: "tarakan.korolev@yandex.ru"
           usedocker: true
