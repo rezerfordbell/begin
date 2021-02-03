@@ -1,9 +1,15 @@
-name: ci
+workflow "Deploy to Heroku" {
+  on = "push"
+  resolves = "release"
+}
 
-on:
-  push:
-    branches: master
+action "login" {
+  uses = "actions/heroku@master"
+  args = "container:login"
+  secrets = ["HEROKU_KEY"]
+}
 
+<<<<<<< HEAD
 jobs:
   export-docker:
     runs-on: ubuntu-latest
@@ -25,3 +31,17 @@ jobs:
       -
         name: Inspect
         run: echo "huila"
+=======
+action "push" {
+  uses = "actions/heroku@master"
+  needs = "login"
+  args = "container:push -a calm-fortress-1234 web"
+  secrets = ["HEROKU_KEY"]
+}
+
+action "release" {
+  uses = "actions/heroku@master"
+  needs = "push"
+  args = "container:release -a calm-fortress-1234 web"
+  secrets = ["HEROKU_KEY"]
+>>>>>>> 7fead190c13870f3fa86440e3266f7548a261286
