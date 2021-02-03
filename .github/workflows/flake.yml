@@ -35,5 +35,5 @@ jobs:
            path: "scr/test.py"
 
         - name: result
-         run: echo something was happened 
+          run: echo something was happened 
 
