@@ -26,3 +26,12 @@ jobs:
         name: Inspect
         run: |
           docker image inspect myimage:latest
+      - uses: actions/checkout@v2
+      - name: Push packages  
+         uses: docker/build-push-action@v1
+         with:
+           username: ${{ github.actor }}
+           password: ${{ secrets.GITHUB_TOKEN }}
+           registry: docker.pkg.github.com
+           repository: my-org/my-repo/my-image
+           tag_with_ref: true
