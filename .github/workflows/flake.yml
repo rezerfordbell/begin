@@ -18,10 +18,7 @@ jobs:
        - name: setup package 
          uses: py-actions/flake8@v1
          with:
-           path: "scr"
-      
-       - name: run tests
-         run: flake8 --statistics test.py
+           path: "scr/main.py"
        - name: result
          run: echo linting is done
         #SO what? 
