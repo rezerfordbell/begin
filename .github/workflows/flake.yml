@@ -24,4 +24,4 @@ jobs:
          run: flake8 --statistics main.py
        - name: result
          run: echo linting is done
-        #SO? 
+        #SO what? 
