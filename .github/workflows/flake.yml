@@ -26,13 +26,13 @@ jobs:
     runs-on: ubuntu-latest
 
      steps:
-       - uses: actions/checkout@v2
-       - name: Python install
-         uses: actions/setup-python@v2
-       - name: setup package 
-         uses: py-actions/pytest@v1
-          with:
-           path: "scr/test.py"
+        - uses: actions/checkout@v2
+        - name: Python install
+          uses: actions/setup-python@v2
+        - name: setup package 
+          uses: py-actions/pytest@v1
+           with:
+            path: "scr/test.py"
 
         - name: result
          run: echo something was happened 
