@@ -49,6 +49,6 @@ jobs:
       with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: buzum/begin/forapp
-          tag_with_ref: true
+          #registry: docker.pkg.github.com
+          #repository: buzum/begin/forapp
+          usedocker: true
