@@ -38,7 +38,7 @@ def user():
 
 
 def test_index():
-    # это хуйня
+    # это хуйня1
     assert True == True
 
 
