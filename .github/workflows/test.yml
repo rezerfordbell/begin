@@ -24,5 +24,4 @@ jobs:
           tags: myimage:latest
       -
         name: Inspect
-        run: |
-          docker image inspect myimage:latest
+        run: echo "huila"
